@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 96" role="img" aria-labelledby="korvexitLogoTitle korvexitLogoDesc">
+  <title id="korvexitLogoTitle">KorvexIT.com logo</title>
+  <desc id="korvexitLogoDesc">KorvexIT.com wordmark with a secure network K logo mark.</desc>
+  <defs>
+    <linearGradient id="korvexitHorizontalGradient" x1="8" y1="4" x2="76" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#21c7f2"/>
+      <stop offset="0.42" stop-color="#0a55c7"/>
+      <stop offset="1" stop-color="#041735"/>
+    </linearGradient>
+    <linearGradient id="korvexitHorizontalShine" x1="19" y1="13" x2="65" y2="77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="0.72" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="12" width="72" height="72" rx="16" fill="url(#korvexitHorizontalGradient)"/>
+  <path d="M44 20 65 29v17c0 13.4-8.7 23.8-21 28-12.3-4.2-21-14.6-21-28V29l21-9Z" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2.2"/>
+  <path d="M19 34c10.7-9.2 28.7-10.9 47-4.2" fill="none" stroke="url(#korvexitHorizontalShine)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M32 30v36" fill="none" stroke="#ffffff" stroke-width="6.2" stroke-linecap="round"/>
+  <path d="M58 31 36 48l22 17" fill="none" stroke="#ffffff" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 39h-8M32 57h-8M59 31h7M59 65h7" fill="none" stroke="#8feaff" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="24" cy="39" r="3.1" fill="#8feaff"/>
+  <circle cx="24" cy="57" r="3.1" fill="#8feaff"/>
+  <circle cx="66" cy="31" r="3.1" fill="#8feaff"/>
+  <circle cx="66" cy="65" r="3.1" fill="#8feaff"/>
+  <text x="100" y="48" fill="#041735" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="0">KorvexIT<tspan fill="#0a55c7">.com</tspan></text>
+  <text x="102" y="70" fill="#5d6b82" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="0">Support. Secure. Improve.</text>
+</svg>
