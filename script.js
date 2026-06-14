@@ -8,6 +8,7 @@ const selectors = {
   accordionToggle: "[data-accordion-toggle]",
   contactForm: "[data-contact-form]",
   formNote: "[data-form-note]",
+  counter: "[data-counter]",
 };
 
 const siteState = {
@@ -44,12 +45,14 @@ function setupMobileNavigation() {
 
   function closeMenu() {
     nav.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "Open menu");
   }
 
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
+    document.body.classList.toggle("menu-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
@@ -62,6 +65,17 @@ function setupMobileNavigation() {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!nav.classList.contains("is-open") || nav.contains(event.target)) return;
+    closeMenu();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1080) {
       closeMenu();
     }
   });
@@ -190,11 +204,76 @@ function setupContactForm() {
       return;
     }
 
-    formNote.textContent =
-      "Thanks. The form is ready to connect to your inbox or enquiry system.";
+    const formData = new FormData(form);
+    const subject = `KorvexIT enquiry from ${formData.get("company") || formData.get("name")}`;
+    const body = [
+      `Name: ${formData.get("name") || ""}`,
+      `Company: ${formData.get("company") || ""}`,
+      `Email: ${formData.get("email") || ""}`,
+      `Phone: ${formData.get("phone") || ""}`,
+      `Employees: ${formData.get("employees") || ""}`,
+      `Main need: ${formData.get("need") || ""}`,
+      "",
+      "Message:",
+      formData.get("message") || "",
+    ].join("\n");
+
+    window.location.href = `mailto:hello@KorvexIT.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    formNote.textContent = "Your email app should open with the request ready to send.";
     formNote.classList.add("is-success");
     form.reset();
   });
+}
+
+function animateCounter(element) {
+  const end = Number(element.dataset.counterEnd || element.textContent);
+  const duration = Number(element.dataset.counterDuration || 900);
+
+  if (!Number.isFinite(end)) return;
+
+  if (siteState.prefersReducedMotion) {
+    element.textContent = String(Math.round(end));
+    return;
+  }
+
+  const startTime = window.performance.now();
+
+  function renderFrame(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const easedProgress = 1 - Math.pow(1 - progress, 3);
+    element.textContent = String(Math.round(end * easedProgress));
+
+    if (progress < 1) {
+      window.requestAnimationFrame(renderFrame);
+    }
+  }
+
+  element.textContent = "0";
+  window.requestAnimationFrame(renderFrame);
+}
+
+function setupCounters() {
+  const counters = document.querySelectorAll(selectors.counter);
+  if (!counters.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    counters.forEach(animateCounter);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.35 },
+  );
+
+  counters.forEach((counter) => observer.observe(counter));
 }
 
 function init() {
@@ -204,6 +283,7 @@ function init() {
   setupTypewriter();
   setupAccordions();
   setupContactForm();
+  setupCounters();
 }
 
 init();

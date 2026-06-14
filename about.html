@@ -3,19 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'">
     <title>About KorvexIT.com | Business IT Support</title>
-    <meta name="description" content="Learn about KorvexIT.com, a business technology support company focused on practical IT support, secure cloud support, IT infrastructure and website care.">
+    <meta name="description" content="Learn about KorvexIT.com, a business technology support company focused on monitoring, practical IT support, cyber security, email and file access and website care.">
     <meta name="theme-color" content="#0a4fb7">
     <link rel="icon" type="image/svg+xml" href="assets/korvexit-logo-mark.svg">
-    <link rel="stylesheet" href="styles.css?v=logo1">
+    <link rel="stylesheet" href="styles.css?v=engage1">
   </head>
   <body data-page="about">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Primary navigation">
         <a class="brand" href="index.html" aria-label="KorvexIT.com home"><span class="brand-mark" aria-hidden="true"><img src="assets/korvexit-logo-mark.svg" alt=""></span><span><strong>KorvexIT.com</strong><small>Support. Secure. Improve.</small></span></a>
-        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
-        <div class="nav-links" data-nav-links><a href="index.html" data-page-link="home">Home</a><a href="services.html" data-page-link="services">Services</a><a href="websites.html" data-page-link="websites">Websites</a><a href="about.html" data-page-link="about">About</a><a href="contact.html" data-page-link="contact">Contact</a></div>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle><span></span><span></span><span></span></button>
+        <div id="primary-menu" class="nav-links" data-nav-links><span class="nav-menu-label">Explore KorvexIT.com</span><a href="index.html" data-page-link="home" data-nav-note="Start with the overview">Home</a><a href="services.html" data-page-link="services" data-nav-note="Monitoring, support and security">IT Support</a><a href="websites.html" data-page-link="websites" data-nav-note="Website builds, care and updates">Websites</a><a href="about.html" data-page-link="about" data-nav-note="How we work and what we value">About</a><a href="contact.html" data-page-link="contact" data-nav-note="Tell us what is slowing you down">Contact</a></div>
         <a class="nav-cta" href="contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>Book a Consultation</a>
       </nav>
     </header>
@@ -42,7 +44,7 @@
             <h2>Good IT support should feel steady, understandable and commercially useful.</h2>
           </div>
           <div class="lead-copy">
-            <p>Many small and growing companies reach a point where informal IT help is no longer enough. People need faster support, owners need fewer interruptions, and the business needs better control over accounts, devices, cloud tools, backups and websites.</p>
+            <p>Many small and growing companies reach a point where informal IT help is no longer enough. People need faster support, owners need fewer interruptions, and the business needs better control over accounts, devices, email, shared files, backups and websites.</p>
             <p>That is the gap KorvexIT.com is designed to fill.</p>
           </div>
         </div>
@@ -51,7 +53,7 @@
       <section class="section section-soft">
         <div class="container values-grid">
           <article><span>01</span><h3>Support people first</h3><p>Technology problems are business problems when they stop staff from doing useful work.</p></article>
-          <article><span>02</span><h3>Secure the basics well</h3><p>Safer sign-ins, better device care and secure cloud working reduce everyday risk.</p></article>
+          <article><span>02</span><h3>Secure the basics well</h3><p>Safer sign-ins, better device care and controlled email and file access reduce everyday risk.</p></article>
           <article><span>03</span><h3>Keep clear records</h3><p>Clear records make support faster, handovers cleaner and decisions easier.</p></article>
           <article><span>04</span><h3>Improve with purpose</h3><p>Not every business needs complexity. The right improvements are the ones that reduce risk or save time.</p></article>
         </div>
@@ -67,12 +69,12 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div><a class="brand footer-brand" href="index.html" aria-label="KorvexIT.com home"><span class="brand-mark" aria-hidden="true"><img src="assets/korvexit-logo-mark.svg" alt=""></span><span><strong>KorvexIT.com</strong><small>Managed business technology support</small></span></a><p>Business IT support, cloud support, cyber security, IT infrastructure support, backup readiness, website development and website care.</p></div>
-        <div><strong>Company</strong><a href="services.html">Services</a><a href="websites.html">Websites</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-        <div><strong>KorvexIT.com</strong><p>Support for the everyday systems that keep your business working: staff, devices, cloud tools, files, backups, suppliers and websites.</p></div>
+        <div><a class="brand footer-brand" href="index.html" aria-label="KorvexIT.com home"><span class="brand-mark" aria-hidden="true"><img src="assets/korvexit-logo-mark.svg" alt=""></span><span><strong>KorvexIT.com</strong><small>Managed business technology support</small></span></a><p>Business IT monitoring, staff support, email and file access, cyber security, backup readiness, website development and website care.</p></div>
+        <div><strong>Company</strong><a href="services.html">IT Support</a><a href="websites.html">Websites</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        <div><strong>Connect</strong><p>Message us on social or WhatsApp when you want a quick first conversation.</p><div class="social-links" aria-label="Social links"><a href="https://x.com/korvexit" target="_blank" rel="noopener noreferrer" aria-label="KorvexIT on Twitter/X">Twitter/X</a><a href="https://www.instagram.com/korvexit/" target="_blank" rel="noopener noreferrer" aria-label="KorvexIT on Instagram">Instagram</a><a href="https://wa.me/440000000000" target="_blank" rel="noopener noreferrer" aria-label="Message KorvexIT on WhatsApp">WhatsApp</a><a href="https://www.facebook.com/korvexit/" target="_blank" rel="noopener noreferrer" aria-label="KorvexIT on Facebook">Facebook</a></div></div>
       </div>
       <div class="container footer-bottom"><span>© <span data-year></span> KorvexIT.com. All rights reserved.</span><a href="contact.html">Book a Free Consultation</a></div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=engage1"></script>
   </body>
 </html>
