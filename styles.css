@@ -385,7 +385,12 @@ h3 {
 
 .typewriter {
   display: inline;
-  color: var(--surface);
+  color: #8feaff;
+  background: linear-gradient(90deg, #8feaff 0%, #ffffff 48%, #8cffcf 100%);
+  background-clip: text;
+  text-shadow: 0 0 26px rgba(34, 199, 242, 0.28);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .typewriter::after {
