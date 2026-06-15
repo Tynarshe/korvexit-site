@@ -778,8 +778,8 @@ a.service-card:focus-visible {
   font-size: 0.9rem;
 }
 
-body[data-page="home"] .service-grid .service-card:last-child {
-  grid-column: 2;
+body[data-page="home"] .service-grid {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .feature-band {
@@ -1655,7 +1655,13 @@ textarea:focus {
 }
 
 @media (max-width: 1080px) {
-  body[data-page="home"] .service-grid .service-card:last-child {
-    grid-column: auto;
+  body[data-page="home"] .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-page="home"] .service-grid {
+    grid-template-columns: 1fr;
   }
 }
