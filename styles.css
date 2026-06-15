@@ -107,6 +107,17 @@ button {
   min-width: 0;
 }
 
+.brand-logo {
+  width: clamp(190px, 18vw, 224px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-brand .brand-logo {
+  width: min(242px, 100%);
+}
+
 .brand-mark {
   width: 44px;
   height: 44px;
@@ -1410,6 +1421,14 @@ textarea:focus {
 }
 
 @media (max-width: 420px) {
+  .brand-logo {
+    width: 176px;
+  }
+
+  .footer-brand .brand-logo {
+    width: min(220px, 100%);
+  }
+
   .brand-mark {
     width: 38px;
     height: 38px;
