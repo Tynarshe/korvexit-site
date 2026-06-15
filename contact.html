@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co">
     <title>Contact KorvexIT.com | Book an IT Support Consultation</title>
     <meta name="description" content="Contact KorvexIT.com to discuss 24/7 IT monitoring, support, infrastructure, cyber security, backup planning, website development or website management.">
     <meta name="theme-color" content="#0a4fb7">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=logo4">
-    <link rel="stylesheet" href="styles.css?v=logo3">
+    <link rel="stylesheet" href="styles.css?v=formsend5">
   </head>
   <body data-page="contact">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -47,7 +47,11 @@
 
       <section class="section">
         <div class="container contact-layout">
-          <form class="contact-form" aria-label="Contact form" novalidate data-contact-form>
+          <form class="contact-form" action="https://formsubmit.co/Support@KorvexIT.com" method="POST" aria-label="Contact form" novalidate data-contact-form>
+            <input type="hidden" name="_subject" value="New KorvexIT website enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" hidden>
             <div class="form-row">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required>
@@ -104,7 +108,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
               Send Request
             </button>
-            <p class="form-note" data-form-note>This form checks your details and opens your email app with the request ready to send.</p>
+            <p class="form-note" role="status" aria-live="polite" data-form-note>Send your request directly from the website. A confirmation message will appear here when it has been sent.</p>
           </form>
 
           <aside class="next-step-panel">
@@ -127,6 +131,6 @@
       </div>
       <div class="container footer-bottom"><span>© <span data-year></span> KorvexIT.com. All rights reserved.</span><a href="contact.html">Book a Free Consultation</a></div>
     </footer>
-    <script src="script.js?v=contact4"></script>
+    <script src="script.js?v=formsend5"></script>
   </body>
 </html>

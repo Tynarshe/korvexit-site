@@ -1146,6 +1146,18 @@ textarea:focus {
   font-weight: 900;
 }
 
+.form-note.is-error {
+  color: #b42318;
+  font-weight: 900;
+}
+
+.btn:disabled,
+.btn[aria-busy="true"] {
+  cursor: wait;
+  opacity: 0.68;
+  transform: none;
+}
+
 .next-step-panel {
   position: sticky;
   top: 100px;

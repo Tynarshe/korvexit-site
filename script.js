@@ -190,39 +190,55 @@ function validateContactForm(form) {
 function setupContactForm() {
   const form = document.querySelector(selectors.contactForm);
   const formNote = document.querySelector(selectors.formNote);
+  const submitButton = form?.querySelector("button[type='submit']");
 
-  if (!form || !formNote) return;
+  if (!form || !formNote || !submitButton) return;
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const validation = validateContactForm(form);
     if (!validation.isValid) {
       formNote.textContent = "Please fix the highlighted fields and try again.";
       formNote.classList.remove("is-success");
+      formNote.classList.add("is-error");
       validation.firstInvalidField.focus();
       return;
     }
 
     const formData = new FormData(form);
-    const subject = `KorvexIT enquiry from ${formData.get("company") || formData.get("name")}`;
-    const body = [
-      `Name: ${formData.get("name") || ""}`,
-      `Company: ${formData.get("company") || ""}`,
-      `Email: ${formData.get("email") || ""}`,
-      `Phone: ${formData.get("phone") || ""}`,
-      `Employees: ${formData.get("employees") || ""}`,
-      `Main need: ${formData.get("need") || ""}`,
-      "",
-      "Message:",
-      formData.get("message") || "",
-    ].join("\n");
+    if (formData.get("_honey")) return;
 
-    window.location.href = `mailto:Support@KorvexIT.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    formData.set("_subject", `KorvexIT enquiry from ${formData.get("company") || formData.get("name")}`);
+    formData.set("_replyto", formData.get("email") || "");
+    formData.set("Submitted from", window.location.href);
 
-    formNote.textContent = "Your email app should open with the request ready to send.";
-    formNote.classList.add("is-success");
-    form.reset();
+    submitButton.disabled = true;
+    submitButton.setAttribute("aria-busy", "true");
+    formNote.textContent = "Sending your request...";
+    formNote.classList.remove("is-success", "is-error");
+
+    try {
+      const response = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("The request could not be sent.");
+      }
+
+      formNote.textContent = "Thanks - your message has been sent. We will get back to you soon.";
+      formNote.classList.add("is-success");
+      form.reset();
+    } catch (error) {
+      formNote.textContent = "Sorry, your message could not be sent right now. Please email Support@KorvexIT.com directly.";
+      formNote.classList.add("is-error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.removeAttribute("aria-busy");
+    }
   });
 }
 
