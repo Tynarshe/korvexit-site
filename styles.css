@@ -142,6 +142,22 @@ button {
   letter-spacing: 0;
 }
 
+.brand .brand-it {
+  color: var(--blue-700);
+}
+
+.brand .brand-domain {
+  color: var(--muted);
+}
+
+.footer-brand .brand-it {
+  color: var(--cyan);
+}
+
+.footer-brand .brand-domain {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .brand small {
   display: block;
   color: var(--muted);
