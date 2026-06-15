@@ -778,6 +778,10 @@ a.service-card:focus-visible {
   font-size: 0.9rem;
 }
 
+body[data-page="home"] .service-grid .service-card:last-child {
+  grid-column: 2;
+}
+
 .feature-band {
   display: block;
 }
@@ -1647,5 +1651,11 @@ textarea:focus {
   .challenge-grid article,
   .values-grid article {
     padding-top: 46px;
+  }
+}
+
+@media (max-width: 1080px) {
+  body[data-page="home"] .service-grid .service-card:last-child {
+    grid-column: auto;
   }
 }
