@@ -1,24 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="korvexitLogoMarkTitle">
   <title id="korvexitLogoMarkTitle">KorvexIT logo mark</title>
-  <defs>
-    <linearGradient id="korvexitMarkGradient" x1="9" y1="5" x2="55" y2="59" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#21c7f2"/>
-      <stop offset="0.42" stop-color="#0a55c7"/>
-      <stop offset="1" stop-color="#041735"/>
-    </linearGradient>
-    <linearGradient id="korvexitMarkShine" x1="15" y1="10" x2="49" y2="54" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.32"/>
-      <stop offset="0.72" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#korvexitMarkGradient)"/>
-  <path d="M32 7 50 15v15c0 12-7.7 21.4-18 25-10.3-3.6-18-13-18-25V15l18-8Z" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
-  <path d="M11 19c9.5-8.3 25.7-9.7 42-3.7" fill="none" stroke="url(#korvexitMarkShine)" stroke-width="7" stroke-linecap="round"/>
-  <path d="M21 16v32" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
-  <path d="M44 17 24 32l20 15" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M21 24h-7M21 40h-7M45 17h6M45 47h6" fill="none" stroke="#8feaff" stroke-width="2.4" stroke-linecap="round"/>
-  <circle cx="14" cy="24" r="2.8" fill="#8feaff"/>
-  <circle cx="14" cy="40" r="2.8" fill="#8feaff"/>
-  <circle cx="51" cy="17" r="2.8" fill="#8feaff"/>
-  <circle cx="51" cy="47" r="2.8" fill="#8feaff"/>
+  <rect width="64" height="64" rx="14" fill="#041735"/>
+  <text x="30" y="47" text-anchor="middle" fill="#ffffff" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="42" font-weight="700" letter-spacing="0">K</text>
+  <path d="M45 32h7" fill="none" stroke="#21c7f2" stroke-width="3" stroke-linecap="round"/>
+  <rect x="51" y="29" width="6" height="6" rx="2" fill="#21c7f2"/>
 </svg>
