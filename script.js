@@ -218,7 +218,7 @@ function setupContactForm() {
       formData.get("message") || "",
     ].join("\n");
 
-    window.location.href = `mailto:hello@KorvexIT.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:Support@KorvexIT.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     formNote.textContent = "Your email app should open with the request ready to send.";
     formNote.classList.add("is-success");
