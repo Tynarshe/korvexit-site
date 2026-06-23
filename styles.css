@@ -394,12 +394,22 @@ h3 {
   line-height: 1.65;
 }
 
+.typewriter-line {
+  display: block;
+  width: 100%;
+  min-height: 3.15em;
+  margin-top: 0.04em;
+}
+
 .typewriter {
-  display: inline;
   color: var(--navy);
   background: linear-gradient(180deg, transparent 62%, rgba(10, 79, 183, 0.16) 0);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   text-shadow: none;
   -webkit-text-fill-color: currentColor;
+  overflow-wrap: normal;
+  text-wrap: balance;
 }
 
 .typewriter::after {
@@ -1513,6 +1523,10 @@ textarea:focus {
     font-size: clamp(2.25rem, 11vw, 3.1rem);
   }
 
+  .typewriter-line {
+    min-height: 3.15em;
+  }
+
   .page-hero h1 {
     font-size: clamp(2.1rem, 10vw, 2.9rem);
   }
@@ -1651,6 +1665,10 @@ textarea:focus {
   .challenge-grid article,
   .values-grid article {
     padding-top: 46px;
+  }
+
+  .typewriter-line {
+    min-height: 3.25em;
   }
 }
 
