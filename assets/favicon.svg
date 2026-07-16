@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 72" role="img" aria-labelledby="korvexitLogoMarkTitle">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186 242" role="img" aria-labelledby="korvexitLogoMarkTitle">
   <title id="korvexitLogoMarkTitle">KorvexIT logo mark</title>
-  <path d="M34 1.5 64 12v20.5C64 49.5 53.5 62.5 34 72 14.5 62.5 4 49.5 4 32.5V12L34 1.5Z" fill="#0D1B3D"/>
-  <path d="m16 21.5 18-6.3 10.8 4.4L16 38.2Z" fill="#FFFFFF"/>
-  <path d="m55.5 17.7-18.7 19.8 18.4 19.9-7.6 7-20-23 20.6-25.4Z" fill="#FFFFFF"/>
-  <path d="m16.8 47.6 8.3-7 11.3 12.9-8.1 7.5Z" fill="#FFFFFF"/>
+  <path d="M93 0 186 32 98 115l57 66-62 61C37 213 0 177 0 112V32L93 0Z" fill="#0D1B3D"/>
+  <path d="M186 62v53c0 17-3 32-9 44l-43-42 52-55Z" fill="#0D1B3D"/>
+  <path d="m35 52 58-20 35 13-89 80-4-73Z" fill="#FFFFFF"/>
+  <path d="m52 153 20-16 41 47-20 19-41-50Z" fill="#FFFFFF"/>
 </svg>
