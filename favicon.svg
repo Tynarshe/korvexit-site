@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="korvexitLogoMarkTitle">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 72" role="img" aria-labelledby="korvexitLogoMarkTitle">
   <title id="korvexitLogoMarkTitle">KorvexIT logo mark</title>
-  <rect width="64" height="64" rx="14" fill="#041735"/>
-  <text x="30" y="47" text-anchor="middle" fill="#ffffff" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="42" font-weight="700" letter-spacing="0">K</text>
-  <path d="M45 32h7" fill="none" stroke="#21c7f2" stroke-width="3" stroke-linecap="round"/>
-  <rect x="51" y="29" width="6" height="6" rx="2" fill="#21c7f2"/>
+  <path d="M34 1.5 64 12v20.5C64 49.5 53.5 62.5 34 72 14.5 62.5 4 49.5 4 32.5V12L34 1.5Z" fill="#0D1B3D"/>
+  <path d="m16 21.5 18-6.3 10.8 4.4L16 38.2Z" fill="#FFFFFF"/>
+  <path d="m55.5 17.7-18.7 19.8 18.4 19.9-7.6 7-20-23 20.6-25.4Z" fill="#FFFFFF"/>
+  <path d="m16.8 47.6 8.3-7 11.3 12.9-8.1 7.5Z" fill="#FFFFFF"/>
 </svg>
