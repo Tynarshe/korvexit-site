@@ -394,6 +394,14 @@ h3 {
   line-height: 1.65;
 }
 
+.hero-title-lead {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  font-size: 0.78em;
+  white-space: nowrap;
+}
+
 .typewriter-line {
   display: block;
   width: 100%;
@@ -1523,6 +1531,10 @@ textarea:focus {
     font-size: clamp(2.25rem, 11vw, 3.1rem);
   }
 
+  .hero-title-lead {
+    font-size: 0.72em;
+  }
+
   .typewriter-line {
     min-height: 3.15em;
   }
@@ -1669,6 +1681,10 @@ textarea:focus {
 
   .typewriter-line {
     min-height: 3.25em;
+  }
+
+  .hero-title-lead {
+    font-size: 0.65em;
   }
 }
 
