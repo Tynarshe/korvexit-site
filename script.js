@@ -43,7 +43,12 @@ function setupMobileNavigation() {
 
   if (!nav || !navToggle || !navLinks) return;
 
+  const background = document.querySelectorAll('main, .site-footer');
+  function setMenuBackground(open) {
+    background.forEach(region => { region.inert = open; });
+  }
   function closeMenu() {
+    setMenuBackground(false);
     nav.classList.remove("is-open");
     document.body.classList.remove("menu-open");
     navToggle.setAttribute("aria-expanded", "false");
@@ -53,6 +58,7 @@ function setupMobileNavigation() {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
     document.body.classList.toggle("menu-open", isOpen);
+    setMenuBackground(isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
@@ -64,8 +70,9 @@ function setupMobileNavigation() {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+    if (event.key === "Escape" && nav.classList.contains("is-open")) {
       closeMenu();
+      navToggle.focus();
     }
   });
 
@@ -225,7 +232,8 @@ function setupContactForm() {
         body: formData,
       });
 
-      if (!response.ok) {
+      const result = await response.json();
+      if (!response.ok || String(result?.success) !== "true") {
         throw new Error("The request could not be sent.");
       }
 
