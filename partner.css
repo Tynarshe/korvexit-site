@@ -16,17 +16,6 @@
 .orbit-controls button{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid #65829a;background:#0a233c;color:#d8efff;line-height:1}
 .orbit-controls button:hover,.orbit-controls button:focus-visible{background:#20486b}
 
-.team-credentials{background:#f5f9fd;border-block:1px solid #d4e1ed}
-.team-credentials .container{display:flex;align-items:center;gap:clamp(24px,4vw,72px);padding-block:14px}
-.team-credentials h2{font-size:1.1rem;line-height:1.25;letter-spacing:-.025em;max-width:16ch;margin:0}
-.team-credentials ul{display:flex;flex-wrap:wrap;flex:1;gap:clamp(20px,4vw,64px);list-style:none;padding:0;margin:0}
-.team-credentials li{display:flex;align-items:center;gap:10px}
-.team-credentials img{width:54px;height:54px;object-fit:contain}
-.team-credentials span,.team-credentials small,.team-credentials strong{display:block}
-.team-credentials span,.team-credentials small{font-size:.78rem;color:#425c74}
-.team-credentials strong{font-size:.98rem;line-height:1.35}
-@media(max-width:850px){.team-credentials .container{align-items:flex-start;flex-direction:column;gap:10px}.team-credentials h2{max-width:none}}
-@media(max-width:600px){.team-credentials ul{flex-direction:column;gap:10px}.team-credentials img{width:46px;height:46px}}
 
 .risk-report {
   scroll-margin-top: 80px;
